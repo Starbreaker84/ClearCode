@@ -38,6 +38,6 @@ values - characterPrintingCosts // массив стомостей печати 
 
 keys - characterTable // таблица симоволов (функция PrintingCosts)
 
-index - indexOfCharacterTable //индекс символа в таблице символов (функция PrintingCosts)
+index - indexOfCharInTable //индекс символа в таблице символов (функция PrintingCosts)
 
 *Ух... я что-то увлекся, кстати, заметил интересную штуку - программы, где поработал над именами и немного над рефакторингом, стали буквально "читаться", как книга.*
