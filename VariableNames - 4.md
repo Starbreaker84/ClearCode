@@ -3,7 +3,7 @@
 - days - passedDays // дни, прошедие с начала завоевательной кампании
 - currentState - conqueredSectors // кол-во захваченных секторов
 - targetState - totalNumberOfSectors // общее кол-во секторов, которое нужно завоевать (значение не вычисляется)
-- sum - saluesSum // сумма значений массива чисел
+- sum - valuesSum // сумма значений массива чисел
 - winVotes - numOfVotesForWinner // кол-во голосов, отданных за победителя (исключение по префиксу)
 - winId - votesForWinnerIndex // индекс голосов, отданных за победителя
 - allVotes - NumberOfVotes // общее кол-во голосов (значение не вычисляется)
