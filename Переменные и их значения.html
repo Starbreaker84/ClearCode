@@ -1,0 +1,271 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body bgcolor="#f9f9f9">﻿
+
+
+<title>Ясный Код (Высшая школа программирования Сергея Бобровского)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+ <style>
+.block1 { width: 200px; background: #ccc; padding: 5px; padding-right: 20px; border: solid 1px black; float: left }
+.block2 { width: 200px; background: #fc0; padding: 5px; border: solid 1px #aaa; padding-top: 10px; top: 40px; left: -30px; }
+
+.SimpleText {
+ font-family: "Arial", Arial, monospace; font-size: 12pt; text-align: left; 
+}
+
+.T1 { background-color: #ffffff; 
+padding-top: 10px; padding-bottom: 3px; 
+font-family: "Courier New", Courier, monospace; font-size: 15pt; text-align: right; 
+border-bottom: 1px solid #aaaaaa; font-weight: bold; 
+
+margin-right: 8px; 
+margin-left: 5px; 
+}
+
+div.box { background-color: white; 
+ font-family: "Microsoft Sans Serif", Sans Serif, monospace; font-size: 14pt; text-align: left; 
+
+border: solid #aaa; border-width: 1px; 
+width: 95% ;
+padding-left: 5px;  
+padding: 0.5em;
+margin-top: 8px; 
+margin-left: 8px; 
+margin-bottom: 3px;
+}
+
+div.boxleft {
+font-family: "Microsoft Sans Serif", Sans Serif, monospace; font-size: 8pt; text-align: left; 
+background-color: #f5fffa; 
+border: solid #aaa; border-width: 1px; 
+padding: 2px;
+margin-left: 1px; 
+margin-right: 5px; 
+margin-bottom: 2px;
+}
+
+div.boxright {
+font-family: "Microsoft Sans Serif", Sans Serif, monospace; font-size: 8pt; text-align: left; 
+background-color: #f5fffa; 
+border: solid #aaa; border-width: 1px; 
+padding: 2px;
+margin-right: 5px; 
+margin-bottom: 2px;
+margin-left: 5px; 
+
+}
+
+</style>
+
+<script type="text/javascript" language="JavaScript">
+<!--
+function Hide(id)
+{
+ if(document.getElementById(id).style.display == 'none')  {
+   document.getElementById(id).style.display='';  }
+ else  {
+   document.getElementById(id).style.display='none';  }
+}
+//-->
+</script>
+
+
+
+
+
+<!--- самая внешняя таблица-две вложенные --->
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
+<tbody><tr><td valign="top">
+<table cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+
+<td width="10%" valign="top"> <!--- Таблицы левой колонки --->
+
+   <!--- Самая верхняя --->
+ <!--- колонка из таблиц --->
+
+<p>
+
+</p></td></tr></tbody></table><p>
+
+
+<table width="100%" cellspacing="10" cellpadding="10" border="0">
+<tbody><tr><td bgcolor="#f9f9f9" align="left">
+
+<!--- --->
+<p>
+
+
+&nbsp;
+</p><p>
+</p></td></tr></tbody></table>
+
+<!---  Конец левой колонки --->
+
+</p></td>
+
+<td width="80%" valign="top"> <!--- Таблицы центральной колонки --->
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="right">
+<tbody><tr>
+<td width="10%" valign="top" bgcolor="#aaaaaa">
+
+<table width="100%" cellspacing="1" cellpadding="50" border="0">
+<tbody><tr><td bgcolor="#f5faff">
+
+<p>
+
+
+</p><div class="box"><p><font size="-1"><b><a href="https://skillsmart.ru/ky/rating.php?key=pABrL5P1" target="_blank">Рейтинг занимающихся</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Starbreaker</b>, вы великолепны! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://skillsmart.ru/news/" target="_blank">news 15.06.22</a></font></p><hr><p>
+</p><div class="T1">
+<h2>
+Переменные и их значения
+</h2>
+</div>
+<p>
+
+
+</p><h3>
+1. Явно объявляйте все переменные
+</h3>
+<p>
+
+
+Неявное объявление переменных -- одна из самых опасных возможностей любого языка. 
+Отключите режим неявных объявлений, если ваш компилятор это позволяет.
+</p><p>
+В Java неявного объявления нету, а в Python как языке с динамической типизацией, наоборот, нету явного объявления,
+поэтому если вы используете Python, PHP, JavaScript и подобные языки, обязательно следуйте рекомендациям следующего пункта.
+</p><p>
+Всегда убеждайтесь методом пристального взгляда в том, что в коде используются все объявленные переменные. Настройте
+компилятор, чтобы он выдавал соответствующие предупреждения.
+</p><p>
+</p><h3>
+2. Инициализируйте каждую переменную, и делайте это правильно
+</h3>
+<p>
+Инициализируйте каждую переменную при её объявлении или там, где она используется в первый раз.
+<br>Объявляйте переменные по мере возможности как final или const (константы), если они используются только как хранилища 
+часто используемого значения.
+</p><p>
+Инициализируйте все без исключения атрибуты/поля класса в его конструкторе.
+</p><p>
+В идеальном случае сразу объявляйте и определяйте каждую переменную 
+непосредственно перед первым обращением к ней. Не присваивайте 
+переменной значение заранее.
+<br>Если вы видите обращение к переменным, но не можете найти поблизости команду их инициализации, отнеситесь к этому с подозрением!
+</p><p>
+В некоторых рекомендациях по стилю предлагается выносить все определения
+ переменных с их начальной инициализацией в начало блока (функции, 
+модуля),
+однако такой подход с большей вероятностью приводит к ошибкам, а 
+главное, он противоречит 
+фундаментальным научным принципам построения надёжных программ. В 
+частности, элементарная на первый взгляд тема присваивания значений 
+переменным имеет глубокий смысл; 
+правильное применение присваивания изучается на курсе по декларативной 
+модели программирования. В идеале, используйте переменные однократно.
+
+</p><p>
+Например, ненаглядный код:
+</p><p>
+</p><pre>int speed = 25;
+int distance = 0;
+... // много кода
+distance = speed * work_hours;
+</pre>
+и его правильный вариант:
+<pre>... // много кода
+int speed = 25;
+int distance = speed * work_hours;
+</pre>
+<p>
+
+</p><h3>
+3. Завершение работы с переменными
+</h3>
+<p>
+Завершив работу с переменными в блоке кода, присваивайте им "недопустимые" значения.<br>
+Например, если переменная хранит ссылку на объект, когда её использование в коде закончено, присвойте ей null (None).
+</p><p>Если это целочисленные переменные, им можно присваивать значения, явно выходящие за область определения соответствующего
+понятия. Например, если переменная хранит скорость в км/ч, по окончании её использования присвойте ей -1.
+В строку можно записать "***ERROR***", и т. п.
+</p><p></p><h3>
+4. Переменные и циклы
+</h3>
+<p>
+
+Инициализируйте переменные, используемые в теле каждого цикла, 
+непосредственно перед этим циклом. Переменную-счётчик по возможности 
+инициализируйте непосредственно в заголовке самого цикла – сегодня такую
+ возможность предлагают почти все языки программирования. 
+Никогда не используйте счётчик цикла за его пределами.
+</p><p>
+Всегда уделяйте особое внимание счётчикам (если они не инициализируются в цикле автоматически -- например, в цикле while) 
+и аккумуляторам (накопителям значений внутри циклов).<br>
+Переменные с именами i, j, k, sum и total часто играют роль счётчиков или локальных аккумуляторов. 
+Нередко программисты забывают проинциализировать счётчик или обнулить аккумулятор перед его использованием в очередной раз.
+
+</p><p></p><h3>
+5. Инварианты в коде
+</h3>
+<p>
+
+Включайте в программу отладочный код или утверждения для проверки важных
+ переменных на предмет допустимости их значений (инварианты).
+Если значения недопустимы, выводите предупреждение. 
+
+
+</p><p>
+</p><h3>
+6. Задание
+</h3>
+<p>
+Внесите 15 правок в свой код с учётом рекомендаций из данного занятия, 
+и напишите по каждой, как и что конкретно вы улучшили.
+</p><p>
+Ваш ответ -- ссылку на ваше решение, файл на гитхабе -- введите в форму ниже:</p><p>
+</p><form action="/ky/send.php" method="post">
+<input type="hidden" value="pABrL5P1" name="key">
+<textarea cols="50" rows="5" name="txt" placeholder="Ваше решение"></textarea><p>
+<input type="submit" value="ОТПРАВИТЬ"></p></form>
+<p>
+<b>После нажатия на ОТПРАВИТЬ вы будете автоматически перенаправлены к следующему занятию!</b>
+
+
+
+</p></div>
+
+</td>
+</tr>
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table>
+
+</td>
+<td width="10%" valign="top"> <!--- Таблицы правой колонки --->
+
+<table width="100%" cellspacing="1" cellpadding="10" border="0">
+<tbody><tr><td bgcolor="#f5faff">
+
+<center>
+<!--- --->
+</center><p>
+
+</p></td></tr></tbody></table>
+
+
+
+<!---  Конец правой колонки --->
+
+
+</td></tr></tbody></table>
+
+
+<!--- нижняя строка --->
+
+
+
+</body></html>
