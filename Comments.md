@@ -1,11 +1,11 @@
-**Задание 3.1:**
-Метод ConquestCampaign.<br/>
+**Задание 3.1:**<br/>
+етод ConquestCampaign.<br/>
 ```
 //высадка десанта с захватом начальных точек
 if (i % 2 != 0) battlefield[battalion[i - 1] - 1][battalion[i] - 1] = 1;
 ```
 
-Метод ShopOLAP.<br/>
+- метод ShopOLAP.<br/>
 ```
 //возвращаем массив неповторяющихся проданных товаров
 String mergedItems = Arrays.stream(items)
@@ -14,25 +14,25 @@ String mergedItems = Arrays.stream(items)
 return mergedItems.split("-");
 ```
 
-Метод LineAnalysis.<br/>
+- метод LineAnalysis.<br/>
 ```
 //интервал завершился и не соответствует паттерну
 boolean isNotPattern = line.charAt(i) == '*' && !lineForAnalyse.toString().equals(pattern);
 ```
 
-Метод Football<br/>
+- метод Football<br/>
 ```
 //можно ли улучшить расстановку игроков?
 if (!sorted) return way1(F, N, indexForSwap) || way2(F, N, indexForSwap);
 ```
 
-Метод TransformTransform.<br/>
+- метод TransformTransform.<br/>
 ```
 //дважды трансформируем массив 
 int[] S = transform(transform(A, N), transform(A, N).length);
 ```
 
-Метод ConquestCampaign.<br/>
+- метод ConquestCampaign.<br/>
 ```
 //размечаем клетки для завоевания
 for (int j = 0; j < M; j++) {
@@ -46,7 +46,7 @@ for (int j = 0; j < M; j++) {
 }
 ```
 
-Метод UFO.<br/>
+- метод UFO.<br/>
 ```
 //поразрядно переводим число из одной системы в другую
 for (int i = 0; i < currentDigitIndex; i++) {
